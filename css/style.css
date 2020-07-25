@@ -1,0 +1,309 @@
+@import url("https://fonts.googleapis.com/css?family=Kaushan+Script");
+
+/*General & utilities */
+
+:root{
+  --primaryPink:#ef7998;
+  --primaryYellow:rgb(249,228,148);
+  --primaryWhite:#fff;
+  --primaryBlack:#000;
+  --secondaryYellow:rgba(249,228,148,0.5);
+  --primaryGrey:rgb(238,238,238);
+}
+
+html,body{ scroll-behavior: smooth; }
+
+a,.btn,.navbar-toggler{
+outline: none !important;
+box-shadow:none !important;
+}
+
+body{
+  font-family:"Kaushan Script", cursive;
+  background: var(--primaryWhite);
+  color:var(--primaryBlack);
+}
+
+.btn-pink {
+  color: var(--primaryBlack) !important;
+  border-color: var(--primaryPink) !important;
+}
+.btn-black {
+  color: var(--primaryBlack) !important;
+  border-color: var(--primarylack) !important;
+}
+.btn-black:hover {
+  color: var(--primaryPink) !important;
+  background: var(--primaryBlack) !important;
+}
+.btn-pink:hover {
+  background: var(--primaryPink) !important;
+  color: var(--primaryBlack) !important;
+}
+ 
+
+
+/*Nav styles */
+
+.nav-info{
+    
+  display:flex;
+  white-space:nowrap;
+  font-weight:bold;
+  cursor:pointer;
+  padding:0.4rem 0.6rem;
+  border-radius:0.25rem;
+  margin:10px 0;
+}  
+
+.nav-info:hover{
+  background:var(--primaryPink);
+  color:#fff;
+}
+ 
+
+.nav-link{
+  color:var(--primaryPink);
+  font-size:1.5rem;
+  transition:all 0.5s ease-in-out;
+  margin-left:10px;
+}
+.nav-link:hover{
+  color:var(--primaryBlack);
+}
+
+
+.toggler-icon{
+  color:var(--primaryPink) !important;
+} 
+ 
+
+
+
+/* banner styles */
+
+
+.max-height{
+  min-height:calc(100vh - 76px);
+  background:linear-gradient(var(--secondaryYellow), var(--secondaryYellow)),
+  url("../img/headerBcg.jpeg") center/cover fixed no-repeat;
+  position:relative;
+}
+
+
+.banner {
+  color: var(--primaryWhite);
+  margin-top: -4rem;
+}
+.banner-title {
+  color: var(--primaryPink);
+  font-size: 4rem;
+}
+.banner-link {
+  font-size: 1.5rem;
+  color: var(--primaryBlack);
+  border: 0.2rem solid var(--primaryBlack);
+}
+.banner-link:hover {
+  background: var(--primaryBlack);
+  color: var(--primaryPink);
+}
+
+
+
+/* cart  */
+.cart {
+  position: absolute;
+  max-height: 25rem;
+  background: var(--primaryWhite);
+  top: 0;
+  right: 0;
+  transition: all 0.3s ease-in-out;
+  background: rgba(255, 255, 255, 0.5);
+  width: 0rem;
+  overflow-y:auto;
+  z-index:20;
+}
+
+
+
+.cart-info__icon{
+  color:var(--primaryBlack);
+  cursor:pointer;
+}
+
+.cart-info{
+  border:0.1rem solid var(--primaryBlack);
+  color:var(--primaryBlack);
+  border-radius:0.25rem;
+  cursor:pointer;
+  padding:0.4rem 0.6rem;
+}
+
+.cart-info:hover{
+  background:var(--primaryPink);
+  border-color:var(--priamaryPink);
+  color:var(--primaryWhite);
+}
+
+.cart-info:hover .cart-info__icon{
+  color:var(--primaryWhite);
+}
+
+
+
+.show-cart {
+  width: 18rem;
+  padding: 2rem 1.5rem;
+  transform: rotateY(-360deg);
+}
+
+
+.cart-item {
+  transition: all 2s ease-in-out;
+}
+ 
+/* cart item */
+.cart-item-remove {
+  color: var(--primaryPink);
+  transition: all 1s ease-in-out;
+}
+.cart-item-remove:hover {
+  transform: scale(1.1);
+  color: var(--primaryBlack);
+}
+#cart-item-price {
+  font-size: 0.8rem;
+} 
+
+
+
+
+ 
+
+/* about */
+.about-img__container{
+  position:relative;
+}
+
+.about-img__container::before{
+  content:"";
+  position:absolute;
+   top:-1.5rem;
+   left:-1.7rem;
+  outline:0.5rem solid var(--primaryYellow);
+  width:100%;
+  height:100%;
+  z-index:-1;
+  transition:all 1s ease-in-out;
+}
+
+.about-img__container:hover:before{
+  top:0;left:0;
+}
+
+/*store */
+
+.store{background:var(--primaryGrey);}
+.img-container{
+  position:relative;
+  cursor:pointer;
+  overflow:hidden;
+}
+
+.store-img{transition:all 1s ease-in-out;}
+
+.img-container:hover .store-img{
+  transform:scale(1.2);
+}
+
+.store-item-icon{
+  position:absolute;
+  bottom:0;
+  right:0;
+  padding:0.75rem;
+  background:var(--primaryYellow);
+  border-top-left-radius:1rem;
+  transition:all 1s ease-in-out;
+  transform:translate(100%,100%);
+ }
+
+ .store-item-icon > i:hover{ color:var(--primaryPink); }
+
+ .img-container:hover .store-item-icon{
+   transform:translate(0,0);
+ }
+
+ .store-item-icon:hover{
+   color:var(--primaryWhite);
+ }
+
+ .store-item-value{
+   color:var(--primaryYellow);
+ }
+
+ .search-box{
+   background:var(--primaryPink);
+   color:var(--primaryBlack);
+ }
+
+ 
+ 
+.lightbox-holder{
+  position:relative;
+}
+.lightbox-item{
+  min-height:80vh;
+  background:url('../img/cake-1.jpeg') center/cover fixed no-repeat;
+  border-radius:0.3rem;
+}
+
+.lightbox-close{
+  color:var(--primaryPink);
+font-size:3rem;
+transition:all 1s ease-in-out;
+cursor:pointer;
+}
+
+.lightbox-close:hover{
+  color:var(--primaryYellow);
+}
+
+
+
+.lightbox-control {
+  position: absolute;
+  font-size: 4rem;
+  color: var(--primaryPink);
+  transition: all 1s linear;
+  cursor: pointer;
+}
+.lightbox-control:hover {
+  color: var(--primaryYellow);
+}
+
+.btnLeft{
+  top:50%;
+  left:0;
+  transform:translateX(-60%);
+}
+.btnRight{
+  top:50%;
+  right:0;
+  transform:translateX(60%);
+}
+
+
+/*queries */
+
+@media screen and (max-width:320px){
+  .nav-item:hover{
+    background:var(--primaryPink);
+    border-radius:0.25rem;
+  }
+}
+
+@media screen and (min-width:640px){
+  .nav-link{ margin-left:0; }
+  .nav-info{ margin:0 10px; }
+}
